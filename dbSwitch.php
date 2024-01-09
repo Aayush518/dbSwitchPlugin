@@ -89,10 +89,14 @@ function sdms_enqueue_custom_scripts_and_styles() {
     wp_enqueue_style('sdms-dark-mode', plugin_dir_url(__FILE__) . 'assets/styles.css');
 
     // Enqueue scripts
+    wp_enqueue_script('jquery');
     wp_enqueue_script('sdms-dark-mode-toggle', plugin_dir_url(__FILE__) . 'assets/script.js', array('jquery'), '1.0', true);
 
-    // Pass ajax_url to script.js
-    wp_localize_script('sdms-dark-mode-toggle', 'frontendajax', array('ajaxurl' => admin_url('admin-ajax.php')));
+    // Pass ajax_url to script.js and the default dark mode value
+    wp_localize_script('sdms-dark-mode-toggle', 'frontendajax', array(
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'default_dark_mode' => $default_dark_mode,
+    ));
 }
 add_action('wp_enqueue_scripts', 'sdms_enqueue_custom_scripts_and_styles');
 
@@ -106,5 +110,3 @@ add_shortcode('dark_mode_toggle', 'sdms_dark_mode_toggle_shortcode');
 function sdms_dark_mode_toggle() {
     echo sdms_dark_mode_toggle_shortcode();
 }
-
-?>
