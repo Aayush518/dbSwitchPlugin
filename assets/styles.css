@@ -1,0 +1,114 @@
+/* Toggle Button Styles */
+.dark-mode-toggle {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #555;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #111 !important;
+    color: #ddd !important;
+}
+
+body.dark-mode a {
+    color: #ddd !important;
+}
+
+body.dark-mode .wp-block-heading {
+    color: #ddd;
+}
+
+body.dark-mode time {
+    color: #ddd;
+}
+
+/* Styles for WordPress Block Elements in Dark Mode */
+body.dark-mode .wp-block-button__link {
+    background-color: #333;
+    color: #ddd !important;
+}
+
+body.dark-mode .wp-block-button__link:hover {
+    background-color: #555;
+    color: #ddd;
+}
+
+body.dark-mode .wp-block-social-links .wp-social-link svg {
+    fill: #ddd !important;
+}
+
+body.dark-mode .wp-block-separator {
+    background-color: #333;
+}
+
+body.dark-mode .wp-block-table {
+    border-color: #333;
+}
+
+body.dark-mode .wp-block-table th,
+body.dark-mode .wp-block-table td {
+    border-color: #333;
+    background-color: #222;
+    color: #ddd;
+}
+
+body.dark-mode .wp-block-list {
+    color: #ddd;
+}
+
+body.dark-mode .wp-block-list li {
+    border-color: #333;
+}
+
+body.dark-mode .wp-block-pullquote {
+    color: #ddd;
+    border-color: #333;
+}
+
+body.dark-mode .wp-block-separator {
+    background-color: #333;
+}
+
+body.dark-mode .wp-block-verse {
+    background-color: #222;
+    color: #ddd;
+}
+
+/* Form Input Styles in Dark Mode */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="password"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="search"],
+body.dark-mode input[type="tel"],
+body.dark-mode input[type="url"],
+body.dark-mode input[type="number"],
+body.dark-mode input[type="date"],
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="password"]:focus,
+body.dark-mode input[type="email"]:focus,
+body.dark-mode input[type="search"]:focus,
+body.dark-mode input[type="tel"]:focus,
+body.dark-mode input[type="url"]:focus,
+body.dark-mode input[type="number"]:focus,
+body.dark-mode input[type="date"]:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+    outline-color: #666;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
